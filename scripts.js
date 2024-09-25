@@ -13,12 +13,9 @@ function showSection(sectionId) {
     }
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        // Menghapus kelas 'active' dari semua link
         link.classList.remove('active');
-        // Mendapatkan nilai 'onclick' dari link
         const onclickValue = link.getAttribute('onclick');
         if (onclickValue && onclickValue.includes(`'${sectionId}'`)) {
-            // Menambahkan kelas 'active' pada link yang sesuai
             link.classList.add('active');
         }
     });   
